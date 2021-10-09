@@ -1,0 +1,23 @@
+function persona_molde(nombre_ingresado, edad_ingresado, cedula_ingresado){
+    this.nombre = nombre_ingresado;
+    this.edad = edad_ingresado;
+    this.cedula = cedula_ingresado;
+
+    this.age = function(){
+        if(this.edad>18){
+            console.log("si es mayor");
+            return true;
+           
+        }else{
+            console.log("es menor");
+            return false;
+
+        }
+    }
+}
+var nombre = prompt("ingrese nombre"); 
+var edad = parseInt(prompt("ingrese edad")); 
+var cedula = prompt("ingrese cedula"); 
+let persona_1 = new persona_molde(nombre, edad, cedula);
+
+

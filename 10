@@ -1,0 +1,35 @@
+class calcu
+{
+    constructor()
+    {
+        this.total = 0
+    }
+    cargar(numero)
+    {
+        this.total = numero
+    }
+    suma(numero)
+    {
+        this.total += numero
+    }
+    resta(numero)
+    {
+        this.total -= numero
+    }
+    multiplicar(numero)
+    {
+        this.total *= numero
+    }
+    valor()
+    {
+        console.log(`Valor actual: ${this.total}`)
+    }
+}
+
+let calc = new calcu()
+calc.cargar(0)
+calc.suma(4)
+calc.multiplicar(5)
+calc.resta(8)
+calc.multiplicar(2)
+calc.valor()

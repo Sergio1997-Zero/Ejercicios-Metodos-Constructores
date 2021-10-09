@@ -1,0 +1,55 @@
+class motor
+{
+    constructor()
+    {
+        this.cambio = 0;
+        this.consumo = 0;
+        this.velocidad = 0;
+        this.rpm = 0;
+        
+        
+    }
+    arrancar()
+    {
+        this.cambio = 1;
+        this.rpm = 500;
+    }
+    subirCambio()
+    {
+        this.cambio += 1;
+    }
+    bajarCambio()
+    {
+        this.cambio -= 1;
+    }
+    subirRPM(cantidad)
+    {
+        this.rpm += cantidad
+    }
+    bajarRPM(cantidad)
+    {
+        this.rpm -= cantidad
+    }
+    velocidadTotal()
+    {
+        this.velocidad = (this.rpm/100)*(0.5+(this.cambio/2))
+    }
+    consumoActualPorKm()
+    {
+        this.consumo = 0.5
+        if(this.cambio == 1)
+        {
+            this.consumo *= 3;
+        }
+        if(this.cambio == 2)
+        {
+            this.consumo *= 2;
+        }
+        if(this.rpm > 3000)
+        {
+            let calculo = (this.rpm-2500)/500;
+            this.consumo = this.consumo * calculo;
+        }
+        return this.consumo
+    }
+}

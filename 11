@@ -1,0 +1,43 @@
+class libro
+{
+    constructor(titulo,autor,Ejemplares,EjemplaresPrestado)
+    {
+        this.titulo = titulo
+        this.autor = autor
+        this.Ejemplares=Ejemplares
+        this.EjemplaresPrestados = EjemplaresPrestado
+    }
+    prestar()
+    {
+        if(this.Ejemplares > 0)
+        {
+            this.EjemplaresPrestado += 1
+            this.Ejemplares -= 1
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    devolver()
+    {
+        if(this.EjemplaresPrestado > 0)
+        {
+            this.EjemplaresPrestado -= 1
+            this.Ejemplares += 1
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    toString()
+    {
+        console.log(`Titulo: ${this.titulo}`)
+        console.log(`Autor: ${this.autor}`)
+        console.log(`Ejemplares disponibles: ${ this.Ejemplares}`)
+        console.log(`Ejemplares Prestados: ${this.EjemplaresPrestado}`)
+    }
+}

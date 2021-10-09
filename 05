@@ -1,0 +1,29 @@
+class contrasena
+{
+    constructor(longitud,contrasena)
+    {
+        this.longitud = longitud
+        this.contrasena = contrasena
+    }
+
+    esFuerte()
+    {
+        if(this.contrasena.length > 5)
+        {
+            return "Es segura"
+        }
+
+    }
+
+    generarPass(tamaño)
+    {
+        let chars = "LACONTRASENA123456"        
+        let contraseNaGenerada = ''
+        for (let i=0; i<tamaño; i++) {
+            let rnum = Math.floor(Math.random() * chars.length)
+            contraseNaGenerada += chars.substring(rnum,rnum+1)
+        }
+        return contrasenaGenerada
+
+    }
+}

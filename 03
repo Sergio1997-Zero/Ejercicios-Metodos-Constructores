@@ -1,0 +1,59 @@
+
+
+function formula_molde(numero_ingresado,numero_ingresado2){
+    this.numero1 = numero_ingresado;
+    this.numero2 = numero_ingresado2;
+
+    this.suma = function(numero1,numero2){
+        suma = numero1 + numero2;
+        return suma;
+
+    }
+    
+    
+}
+var numero1 = parseInt(prompt("ingrese numero 1"));
+var numero2 = parseInt(prompt("ingrese numero 2"));
+let num = new formula_molde(numero1,numero2); 
+num.suma(numero1,numero2);
+
+const number = parseInt(prompt('ingrese un numero fibonaci: '));
+let n1 = 0, n2 = 1, nextTerm;
+
+console.log('la serie de fibonaci:');
+console.log(n1); // inmprimimos el valor en 0
+console.log(n2); // inmprimimos el valo en 1
+
+nextTerm = n1 + n2;
+
+while (nextTerm <= number) {
+
+    // aqui imprimimos el siguiente numero
+    console.log(nextTerm);
+
+    n1 = n2;
+    n2 = nextTerm;
+    nextTerm = n1 + n2;
+}
+
+function pares(){
+
+    let num1 = parseInt(prompt("Ingrese un numero"))
+
+    
+    if(num1>=2){
+        if(num1 % 2 == 0){
+            return window.alert(`El numero ${num1} no tiene residuo`)
+        }
+        else{
+            return window.alert(`El numero ${num1} tiene residuo`)
+        }
+    }
+
+}
+pares();
+
+
+
+
+

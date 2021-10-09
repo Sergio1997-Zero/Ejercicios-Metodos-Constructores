@@ -1,0 +1,51 @@
+class contador
+{
+    constructor()
+    {
+        this.conta = 0;
+        this.ultimo = "";
+    }
+    reset()
+    {
+        this.conta = 0;
+        this.ultimo = "reset"
+    }
+    inc()
+    {
+        this.conta += 1;
+        this.ultimo = "aumenta"
+    }
+    dec()
+    {
+        this.conta -= 1;
+        this.ultimo = "baja"
+    }
+    valorActual(nuevoValor)
+    {
+        if(nuevoValor != null)
+        {
+            this.conta = nuevoValor;
+            this.ultimo = "actualiza"
+        }
+        if(nuevoValor == null)
+        {
+            console.log(`el valor es:  ${this.conta}`)
+        }
+
+    }
+    ultimoComando()
+    {
+        console.log(`El último fue ${this.ultimo}`)
+    }
+
+}
+
+let contadornuevo = new contador();
+contadornuevo.valorActual(7)
+contadornuevo.inc()
+contadornuevo.inc()
+contadornuevo.dec()
+contadornuevo.inc()
+contadornuevo.valorActual()
+
+contadornuevo.ultimoComando()

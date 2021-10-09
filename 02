@@ -1,0 +1,30 @@
+function cuenta_molde(nombre_ingresado, cantidad_ingresado){
+    this.nombre = nombre_ingresado;
+    this.cantidad = cantidad_ingresado;
+
+    this.imprimir = function(){
+        console.log(`el titular de la cuenta es: ${nombre}, la cantidad de la cuenta es ${cantidad} `)
+    }
+
+    this.retirar = function(retirar){
+        var reti = cantidad - retirar;
+
+        if(retirar <= cantidad){
+            return console.log(`se retiro de la cuenta ${retirar}`);
+
+        }else{
+            return console.log(`fondos insuficientes`);
+        }
+
+
+    }
+    
+
+   
+}
+var nombre = prompt("ingrese nombre del titular"); 
+var cantidad = parseInt(prompt("ingrese cantidad"));
+let cuenta_1 = new cuenta_molde(nombre, cantidad,);
+let app = parseInt(prompt("ingrese la cantidad a retirar"));
+cuenta_1.retirar(app);
+
